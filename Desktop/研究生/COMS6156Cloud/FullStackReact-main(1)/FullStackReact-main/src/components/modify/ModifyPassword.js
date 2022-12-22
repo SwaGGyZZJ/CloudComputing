@@ -1,7 +1,7 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 import UserContext from "../../context/context";
 import {customerUrl, generalUrl, sellerUrl} from "../../urls/url";
-
+import './Modify.css';
 const ModifyPassword = () => {
 
     const [password,setPassword] = useState({
@@ -63,7 +63,7 @@ const ModifyPassword = () => {
     }
 
     return (
-        <div>
+        <div className='navbar'>
             <form onSubmit={submitModifyPasswordHandler}>
                 <label htmlFor="oldPassword">old password:</label>
                 <input type="password" name={'oldPassword'} onChange={oldPasswordChangeListener} required={true}/><br/>

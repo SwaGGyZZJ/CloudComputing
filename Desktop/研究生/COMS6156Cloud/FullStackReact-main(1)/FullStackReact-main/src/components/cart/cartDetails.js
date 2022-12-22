@@ -3,6 +3,7 @@ import ModifyItemDetail from "./ModifyItemDetail";
 import {generalUrl, sellerUrl} from "../../urls/url";
 import UserContext from "../../context/context";
 import itemContext from "../../context/itemContext";
+import './cart.css';
 
 const CartDetails = (props) => {
     const [isModify,setIsModify] = useState(false);
@@ -95,7 +96,7 @@ const CartDetails = (props) => {
     }
 
     return (
-        <div className='form'>
+        <div>
             {!isModify&&<ul>
                 <li>name: {props.item[1]}</li>
                 <li>price: {props.item[2]}</li>

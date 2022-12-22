@@ -2,6 +2,7 @@ import React, {useCallback, useContext, useState} from 'react';
 import UserContext from "../../context/context";
 import {customerUrl, generalUrl, sellerUrl} from "../../urls/url";
 import storageUtils from "../../utils/storageUtils";
+import './Modify.css'
 
 const ModifyInfo = () => {
 

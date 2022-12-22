@@ -1,6 +1,6 @@
 import React from 'react';
 import CartDetails from "./cartDetails";
-
+import './cart.css'
 const Cart = (props) => {
 
 
