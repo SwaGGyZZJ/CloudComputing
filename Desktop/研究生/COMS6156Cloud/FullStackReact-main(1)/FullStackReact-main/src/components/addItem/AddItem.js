@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {compositeUrl, generalUrl, sellerUrl} from "../../urls/url";
 import UserContext from "../../context/context";
 import itemContext from "../../context/itemContext";
-
+import './additem.css';
 const AddItem = () => {
 
     const usercxt = useContext(UserContext);
@@ -81,7 +81,7 @@ const AddItem = () => {
     return (
         <div>
             {/*<button onClick={addItemClickHandler}>Add item</button>*/}
-            <form onSubmit={submitNewItemHandler} className='back'>
+            <form onSubmit={submitNewItemHandler} className='itemform'>
                 <label htmlFor="name">name:</label>
                 <input type="text" name={"name"} onChange={nameChangeListener} required={true}/><br/>
                 <label htmlFor="price">price:</label>

@@ -96,8 +96,8 @@ const CartDetails = (props) => {
     }
 
     return (
-        <div>
-            {!isModify&&<ul>
+        <div >
+            {!isModify&&<ul className='lists'>
                 <li>name: {props.item[1]}</li>
                 <li>price: {props.item[2]}</li>
                 <li>amount: {props.item[3]}</li>

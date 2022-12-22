@@ -20,7 +20,7 @@ const Logout = () => {
         navigate('/login');
     }
     return (
-            <button onClick={logoutHandler} className='button'>logout</button>
+            <button onClick={logoutHandler} className='buttonright'>logout</button>
     );
 };
 

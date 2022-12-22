@@ -6,7 +6,7 @@ const Cart = (props) => {
 
 
     return (
-        <form className='navbar'>
+        <form >
             {props.Result.map(item=><CartDetails item={item} key={item[0]}/>)}
         </form>
     );

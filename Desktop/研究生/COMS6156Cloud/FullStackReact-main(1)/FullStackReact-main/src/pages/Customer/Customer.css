@@ -19,16 +19,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
+}
+.button a.right {
+    float: right;
 }
 /* 标题 */
 .header {
-    padding: 80px;
-    text-align: center;
+    padding: 5px;
+    text-align: left;
     background: #afdfe4;
     color: white;
-    font-size: 30px;
+    font-size: 10px;
+    height: 30px;
 }
 
 /* 标题字体加大 */

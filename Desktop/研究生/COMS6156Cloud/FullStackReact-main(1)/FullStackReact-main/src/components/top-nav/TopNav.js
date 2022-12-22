@@ -14,10 +14,10 @@ const TopNav = () => {
     },[storageUtils.getUser()]);
 
     return (
-        <div>
+        <a>
             {/*<Link to={'/'}>Home</Link>*/}
             {!showLogout?null:<Logout/>}
-        </div>
+        </a>
     );
 };
 
