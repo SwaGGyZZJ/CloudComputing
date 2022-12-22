@@ -2,7 +2,7 @@ import React, {useCallback, useContext, useState} from 'react';
 import UserContext from "../../context/context";
 import {customerUrl, generalUrl, sellerUrl} from "../../urls/url";
 import storageUtils from "../../utils/storageUtils";
-import './Modify.css'
+import classes from './Modify.css';
 
 const ModifyInfo = () => {
 
@@ -61,8 +61,8 @@ const ModifyInfo = () => {
     }
 
     return (
-        <div className='navbar'>
-            <form onSubmit={submitUserDataHandler}>
+        <div >
+            <form className={classes.form} onSubmit={submitUserDataHandler}>
                 <label htmlFor="username">username:</label>
                 <input type="text" name={'username'} defaultValue={usercxt.username} onChange={usernameChangeListener}/><br/>
                 <label htmlFor="address">address:</label>

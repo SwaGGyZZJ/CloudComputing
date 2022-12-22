@@ -1,0 +1,38 @@
+.header {
+    padding: 5px;
+    text-align: left;
+    background: #afdfe4;
+    color: black;
+    font-size: 10px;
+    height: 30px;
+}
+.header Link{
+    color:black;
+}
+.navbar {
+    overflow: hidden;
+
+    background-color:whitesmoke;
+    width: auto;
+}
+
+/* 导航栏样式 */
+.navbar a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color:#dddddd;
+    color:black;
+}

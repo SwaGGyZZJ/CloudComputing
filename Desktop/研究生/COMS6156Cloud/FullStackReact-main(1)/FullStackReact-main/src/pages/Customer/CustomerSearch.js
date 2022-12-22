@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from "../../components/search/Search";
-import './Customer.css'
+import './Customer.module.css'
 const CustomerSearch = () => {
     return (
         <div >

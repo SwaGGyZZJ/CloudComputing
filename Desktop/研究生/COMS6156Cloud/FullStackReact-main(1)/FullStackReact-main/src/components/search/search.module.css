@@ -1,0 +1,49 @@
+.searchForm{
+    overflow: hidden;
+    background-color: whitesmoke;
+    width: auto;
+    padding-left: 10px;
+}
+
+.searchForm input ,
+.searchForm button {
+    margin: 6px 0;
+    height: 22px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 0 14px;
+}
+.searchForm label{
+    margin-left: 10px;
+}
+
+.priceInput{
+    width: 80px;
+}
+
+.searchForm input::placeholder {
+    color: #3d5245;
+}
+.searchForm input:focus {
+    outline: 0;
+}
+
+.searchForm button {
+    text-align: center;
+    background-color: rgba(57, 88, 69, 0.4);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.searchForm button{
+    margin-left: 10px;
+}
+
+
+.searchForm button:hover {
+    background-color: rgba(12, 80, 38, 0.67);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.2), 0 0 0 0 rgba(0,0,0,0.19);
+
+}

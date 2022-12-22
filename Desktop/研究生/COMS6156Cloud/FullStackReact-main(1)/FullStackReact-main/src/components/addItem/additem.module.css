@@ -1,18 +1,5 @@
-
-.back{
-
-    background: #afdfe4;
-    background-size: cover;
-    font-family: sana-fserif;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
 .form{
+
     width: 400px;
     height: 450px;
     display: flex;
@@ -39,21 +26,23 @@
     filter: blur(6px);
     z-index: -1;
 }
-.form h2{
-    font-size: 18px;
-    font-weight: 400;
-    color: #3d5245;
-}
+
 .form Link,
-.form input ,
-.form button {
-    margin: 6px 0;
+.form input {
+    margin-left:50px;
+    margin-top: 5px;
+    width:200px;
     height: 36px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border: 1px solid black;
     border-radius: 4px;
     padding: 0 14px;
     color: #3d5245;
+}
+.form label{
+    margin-left:50px;
+    text-align: center;
+    width:200px;
 }
 
 .form input::placeholder {
@@ -64,7 +53,12 @@
 }
 .form Link,
 .form button {
+    margin-left:50px;
     margin-top: 15px;
+    width:200px;
+    height:36px;
+    border:none;
+    border-radius: 4px;
     text-align: center;
     background-color: rgba(57, 88, 69, 0.4);
     color: white;
@@ -79,8 +73,3 @@
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
 
 }
-a:link {color:#3d5245;}      /* 未访问链接*/
-a:visited {color:#3d5245;}  /* 已访问链接 */
-a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
-a:active {color:#0000FF;}  /* 鼠标点击时 */
-

@@ -1,20 +1,19 @@
-
-.back{
-
-    background: #afdfe4;
-    background-size: cover;
-    font-family: sana-fserif;
-    width: 100vw;
-    height: 100vh;
+.form{
+    width: fit-content;
+    height: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-
+    flex-direction: column;
+    padding: px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    background: inherit;
+    border-radius: 18px;
+    overflow: hidden;
 }
-.registerform{
-    width: 300px;
-    height: 550px;
+.background{
+    width: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -25,8 +24,7 @@
     border-radius: 18px;
     overflow: hidden;
 }
-
-.registerform::before{
+.form::before{
     content: "";
     width: calc(100% + 20px);
     height: calc(100% + 20px);
@@ -39,38 +37,35 @@
     filter: blur(6px);
     z-index: -1;
 }
-.registerform h2{
-    font-size: 18px;
-    font-weight: 400;
-    color: #3d5245;
-}
-.label{
-    display: block;
-    position: absolute;
-    opacity: 0;
 
-}
-.registerform Link,
-.registerform input ,
-.registerform button {
+.form Link,
+.form input {
     margin: 6px 0;
+    width:200px;
     height: 36px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border: 1px solid black;
     border-radius: 4px;
     padding: 0 14px;
     color: #3d5245;
 }
+.form label{
+    text-align: center;
+    width:200px;
+}
 
-.registerform input::placeholder {
+.form input::placeholder {
     color: #3d5245;
 }
-.registerform input:focus {
+.form input:focus {
     outline: 0;
 }
-.registerform Link,
-.registerform button {
+.form Link,
+.form button {
     margin-top: 15px;
+    width:200px;
+    height:36px;
+    border-radius: 4px;
     text-align: center;
     background-color: rgba(57, 88, 69, 0.4);
     color: white;
@@ -79,14 +74,9 @@
     cursor: pointer;
     transition: 0.4s;
 }
-.registerform Link,
-.registerform button:hover {
+.form Link,
+.form button:hover {
     background-color: rgba(12, 80, 38, 0.67);
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.19);
 
 }
-a:link {color:white;}      /* 未访问链接*/
-a:visited {color:navajowhite;}  /* 已访问链接 */
-a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
-a:active {color:#0000FF;}  /* 鼠标点击时 */
-

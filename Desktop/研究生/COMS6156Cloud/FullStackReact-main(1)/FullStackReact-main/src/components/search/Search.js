@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import Cart from "../cart/Cart";
 import {generalUrl, sellerUrl} from "../../urls/url";
 import {useLocation} from "react-router-dom";
+import classes from './search.module.css';
 const Search = () => {
 
 
@@ -109,19 +110,19 @@ const Search = () => {
 
     return (
         <div>
-            <form onSubmit={submitFormHandler} className='navbar' >
-                <a><label htmlFor="Search">Search:</label></a>
-                <a><input type="text" placeholder={'please enter a product'} defaultValue={searchContent.content} onChange={searchChangeHandler} id={'Search'}/></a>
-                <a><label htmlFor="Filter">Order</label></a>
-                <a><select name="" id="" onChange={orderChangeHandler}>
+            <form onSubmit={submitFormHandler} className={classes.searchForm} >
+                <label htmlFor="Search">Search:</label>
+                <input type="text" placeholder={'please enter a product'} defaultValue={searchContent.content} onChange={searchChangeHandler} id={'Search'}/>
+                <label htmlFor="Filter">Order</label>
+                <select name="" id="" onChange={orderChangeHandler}>
                     <option value={"increasing_order"}>From low to high</option>
                     <option value={"decreasing_order"}>From high to low</option>
-                </select></a>
-                <a><label htmlFor="">Price range</label></a>
-                <a>from <input type="number" onChange={lowestPriceChangeHandler}
-                            placeholder={0}/>to<input type="number" onChange={highestPriceChangeHandler}
-                                                      placeholder={0}/></a>
-                <button type={"submit"} className='button'>Search</button>
+                </select>
+                <label htmlFor="">Price range</label>
+                from <input type="number" className={classes.priceInput} onChange={lowestPriceChangeHandler}
+                            placeholder={0}/>to<input type="number" className={classes.priceInput} onChange={highestPriceChangeHandler}
+                                                      placeholder={0}/>
+                <button type={"submit"}>Search</button>
             </form>
             {withSearchResult && <Cart Result={searchResult}/>}
         </div>

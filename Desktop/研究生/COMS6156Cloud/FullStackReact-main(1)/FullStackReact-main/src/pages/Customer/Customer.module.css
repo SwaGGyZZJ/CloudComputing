@@ -33,14 +33,11 @@ body {
     height: 30px;
 }
 
-/* 标题字体加大 */
-.header h1 {
-    font-size: 40px;
-}
 
 /* 导航 */
 .navbar {
     overflow: hidden;
+
     background-color:whitesmoke;
     width: auto;
 }
@@ -49,7 +46,7 @@ body {
 .navbar a{
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -91,19 +88,6 @@ body {
     padding: 20px;
 }
 
-/* 测试图片 */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-/* 底部 */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-}
 
 /* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
 @media screen and (max-width: 700px) {

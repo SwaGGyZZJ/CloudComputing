@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {json, Link, useNavigate} from "react-router-dom";
 import {customerUrl, generalUrl, sellerUrl} from "../../urls/url";
-import './Register.css';
+import classes from './Register.module.css';
 const Register = () => {
     // 重定向页面
     const navigate = useNavigate();
@@ -97,10 +97,10 @@ const Register = () => {
     }
 
     return (
-        <div className= 'back'>
-            <div>
-            <header className='header'>Register</header>
-            <form onSubmit={submitRegisterForm} className='registerform'>
+        <div className= {classes.back}>
+            <div className={classes.background}>
+            <header className={classes.header}>Register</header>
+            <form onSubmit={submitRegisterForm} className={classes.registerform}>
                 <div>
                     <label htmlFor="email"></label>
                     <input type="email" name={'email'} placeholder={'email'} onChange={emailChangeHandler} required={true}/><br/>
@@ -126,9 +126,9 @@ const Register = () => {
                     <input type="text" name={'zipcode'} placeholder={'zipcode'} onChange={zipcodeChangeHandler} required={true}/>
                 </div>
                 <button type={"submit"}>Register</button>
-                <button onClick={changeIdentityHandler}>{identity?<p>Register as Seller</p>:<p>Register as Customer</p>}</button>
-                <Link to={'/login'}>Login</Link><br/>
             </form>
+                <button className={classes.button} onClick={changeIdentityHandler}>{identity?<p>Register as Seller</p>:<p>Register as Customer</p>}</button>
+                <Link className={classes.button} to={'/login'}>Login</Link><br/>
             </div>
         </div>
     );

@@ -4,24 +4,24 @@ import TopNav from "../../components/top-nav/TopNav";
 import AddItem from "../../components/addItem/AddItem";
 import {Link, Outlet} from "react-router-dom";
 import storageUtils from "../../utils/storageUtils";
-
+import classes from './seller.module.css';
 const Seller = () => {
     return (
-        <body>
-            <div className='header'>
+        <>
+            <div className={classes.header}>
 
                 Hello,<Link to={'profile'}>{storageUtils.getUser().username}!</Link>
                 <TopNav/>
             </div>
-            <div className='navbar'>
-                <a><Link to={'addItem'}>Add Item</Link></a>
-                <a><Link to={'showItem'}>Show Item</Link></a>
+            <div className={classes.navbar}>
+                <Link to={'addItem'}>Add Item</Link>
+                <Link to={'showItem'}>Show Item</Link>
             </div>
             <Outlet/>
             {/*<AddItem/>*/}
             {/*<ShowItem/>*/}
 
-        </body>
+        </>
     );
 };
 

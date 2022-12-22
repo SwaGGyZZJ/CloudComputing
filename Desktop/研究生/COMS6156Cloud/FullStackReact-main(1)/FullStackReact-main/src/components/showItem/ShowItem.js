@@ -4,7 +4,7 @@ import UserContext from "../../context/context";
 import {useNavigate} from "react-router-dom";
 import Cart from "../cart/Cart";
 import ItemContext from "../../context/itemContext";
-
+import classes from './showitem.module.css';
 const ShowItem = () => {
     const usercxt = useContext(UserContext);
     const navigate = useNavigate();
@@ -40,7 +40,7 @@ const ShowItem = () => {
 
     return (
         <ItemContext.Provider value={{fetchData}}>
-            <div className='navbar'>
+            <div className={classes.back}>
                 {!isLoading&&<Cart Result={items}/>}
             </div>
         </ItemContext.Provider>

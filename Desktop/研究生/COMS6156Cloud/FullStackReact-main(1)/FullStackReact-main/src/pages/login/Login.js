@@ -5,7 +5,7 @@ import storageUtils from "../../utils/storageUtils";
 import UserContext from "../../context/context";
 import MyGoogleLogin from "../../components/googleLogin/MyGoogleLogin";
 // login router component
-import './Login.css';
+import classes from './Login.module.css';
 
 
 const Login = (props) => {
@@ -91,20 +91,20 @@ const Login = (props) => {
         }
     }
     return (
-        <div className='back'>
+        <div className={classes.back}>
 
-            <div>
-                <header className='header'>Login</header>
-                <form onSubmit={submitLogin} className='registerform'>
+            <div className={classes.background}>
+                <header className={classes.header}>Login</header>
+                <form onSubmit={submitLogin} className={classes.registerform}>
                     <label htmlFor="email"></label>
                     <input type="text" name={"email"} onChange={emailChangeHandler} placeholder={"email"} defaultValue={loginData.email}/><br/>
                     <label htmlFor="password"></label>
                     <input type="password" name={"password"} onChange={passwordChangeHandler} placeholder={"password"} defaultValue={loginData.password}/><br/>
-                    <button onClick={changeIdentityHandler}>{identity?<p>Login as Seller</p>:<p>Login as Customer</p>}</button>
                     <button type={"submit"}>Login</button>
-                    <MyGoogleLogin identity = {identity}/>
-                    <Link to={'/register'}>register</Link><br/>
                 </form>
+                <button className={classes.button} onClick={changeIdentityHandler}>{identity?<p>Login as Seller</p>:<p>Login as Customer</p>}</button>
+                <Link  className={classes.button}to={'/register'}>register</Link><br/>
+                <div className ={classes.googlelogin}><MyGoogleLogin  identity = {identity}/></div>
             </div>
         </div>
     );
